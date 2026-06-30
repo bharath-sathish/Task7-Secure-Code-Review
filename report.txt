@@ -1,0 +1,36 @@
+Task 7 - Secure Code Review
+
+Objective:
+Review source code and identify security vulnerabilities.
+
+Tools Used:
+Manual Static Analysis
+Kali Linux
+
+Issues Found:
+
+1. SQL Injection
+Reason:
+User input is directly added to SQL query.
+
+
+Risk:
+Attacker can bypass login or access database.
+
+Recommendation:
+Use parameterized queries.
+
+2. Weak Password Handling
+
+Reason:
+Password is used directly.
+
+Risk:
+Password can be stolen if database is leaked.
+
+Recommendation:
+Use bcrypt or Argon2 hashing.
+
+Conclusion:
+The application contains SQL Injection vulnerability and weak password handling.
+Both issues should be fixed before deployment.
